@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-
-# Iterate through the alphabet using ASCII and print without newline
-for i in range(26):
-    print(f"{chr(97 + i)}", end='')
+for c in range(ord('a'), ord('z')+1):
+    print('{}'.format(chr(c)), end='')
