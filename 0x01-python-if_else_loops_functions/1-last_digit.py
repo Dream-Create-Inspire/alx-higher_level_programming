@@ -6,6 +6,10 @@ number = random.randint(-10000, 10000)
 # Extract the last digit of the number
 last_digit = abs(number) % 10
 
+# Preserve the sign of the last digit
+if number < 0:
+    last_digit = -last_digit
+
 # Print the desired output
 print(f"Last digit of {number} is {last_digit}", end=" ")
 
