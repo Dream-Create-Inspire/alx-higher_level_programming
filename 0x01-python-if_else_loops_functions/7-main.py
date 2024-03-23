@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-def islower(c):
-    if isinstance(c, str) and len(c) == 1:
-        return ord('a') <= ord(c) <= ord('z')
-    else:
-        return False
+islower = __import__('7-islower').islower
 
 print("a is {}".format("lower" if islower("a") else "upper"))
 print("H is {}".format("lower" if islower("H") else "upper"))
