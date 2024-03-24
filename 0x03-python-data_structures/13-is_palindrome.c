@@ -1,56 +1,31 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
- * Definition for singly-linked list.
- * struct listint_s {
- *     int n;
- *     struct listint_s *next;
- * };
- * typedef struct listint_s listint_t;
- */
-
-/**
- * is_palindrome - Checks if a singly linked list is a palindrome.
- * @head: Pointer to the head of the linked list.
- *
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome.
+ * is_palindrome - checks if a singly linked list is a palindrome
+ * @head: pointer to the head of the list
+ * Return: 1 if palindrome, 0 otherwise
  */
 int is_palindrome(listint_t **head)
 {
     listint_t *current = *head;
-    int size = 0, i = 0, j = 0;
-    int *array = NULL;
+    int values[1000]; // Assuming a maximum of 1000 elements in the list
+    int count = 0, i;
 
-    if (!head || !(*head) || !((*head)->next))
-        return (1);
-
-    while (current)
+    // Store the values in the array
+    while (current != NULL)
     {
-        size++;
+        values[count++] = current->n;
         current = current->next;
     }
 
-    array = malloc(sizeof(int) * size);
-    if (!array)
-        return (0);
-
-    current = *head;
-    while (current)
+    // Check if the array is a palindrome
+    for (i = 0; i < count / 2; i++)
     {
-        array[i++] = current->n;
-        current = current->next;
+        if (values[i] != values[count - i - 1])
+            return 0; // Not a palindrome
     }
 
-    for (i = 0, j = size - 1; i < size / 2; i++, j--)
-    {
-        if (array[i] != array[j])
-        {
-            free(array);
-            return (0);
-        }
-    }
-
-    free(array);
-    return (1);
+    return 1; // Palindrome
 }
-
