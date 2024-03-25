@@ -1,14 +1,12 @@
-#!/usr/bin/python3
-
+#!/usr/bin/env python3
 def uppercase(s):
-    result = ""
     for char in s:
-        if ord('a') <= ord(char) <= ord('z'):
-            result += chr(ord(char) - 32)
-        else:
-            result += char
-    print(result)
+        ascii_value = ord(char)
+        if 97 <= ascii_value <= 122:  # Check if lowercase
+            ascii_value -= 32  # Convert to uppercase ASCII value
+        print(chr(ascii_value), end='')
+    print()  # Print newline
 
-# Test cases
-uppercase("best")
-uppercase("Best School 98 Battery street")
+# Test the function
+s = "hello, world!"
+uppercase(s)
