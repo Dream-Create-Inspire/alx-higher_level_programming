@@ -1,17 +1,16 @@
 #!/usr/bin/node
-// Get the arguments passed to the script
-const args = process.argv.slice(2);
+const factorial = (num) => {
+  // Base case: Factorial of 0 and NaN is 1
+  if (isNaN(num) || num === 0) {
+    return 1;
+  }
 
-// Get the first argument and convert it to an integer
-const num = Number.parseInt(args[0], 10);
-
-// Function to compute the factorial recursively
-const factorial = n => {
-    if (isNaN(n) || n <= 1) {
-        return 1;
-    }
-    return n * factorial(n - 1);
+  // Recursive case: num * factorial(num - 1)
+  return num * factorial(num - 1);
 };
 
-// Compute the factorial and print the result
-console.log(factorial(num));
+// Get the first argument (cast to a number)
+const number = Number(process.argv[2]);
+
+// Calculate and print the factorial
+console.log(factorial(number));
