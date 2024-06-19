@@ -8,3 +8,4 @@ const secondArg = args[1] ? args[1] : "undefined";
 
 // Print the output in the format " is "
 console.log(`${firstArg} is ${secondArg}`);
+
