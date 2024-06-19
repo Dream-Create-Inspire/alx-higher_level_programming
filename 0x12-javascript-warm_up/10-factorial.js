@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const factorial = (num) => {
   // Base case: Factorial of 0 and NaN is 1
   if (isNaN(num) || num === 0) {
@@ -12,5 +13,8 @@ const factorial = (num) => {
 // Get the first argument (cast to a number)
 const number = Number(process.argv[2]);
 
-// Calculate and print the factorial
-console.log(factorial(number));
+// Calculate the factorial
+const result = factorial(number);
+
+// Print the factorial result, handling Infinity if the result is too large
+console.log(Number.isFinite(result) ? result : "Infinity");
