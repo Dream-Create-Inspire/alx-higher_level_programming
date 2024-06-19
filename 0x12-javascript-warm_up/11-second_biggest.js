@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 // Get the arguments passed to the script
 const args = process.argv.slice(2);
 
@@ -7,15 +6,16 @@ const args = process.argv.slice(2);
 const numbers = args.map(Number).sort((a, b) => b - a);
 
 // Determine the second biggest integer
-let secondBiggest = Number.MIN_SAFE_INTEGER;
+let secondBiggest = 0;
 if (numbers.length > 1) {
-    for (let i = 1; i < numbers.length; i++) {
-        if (numbers[i] < numbers[i - 1]) {
-            secondBiggest = numbers[i];
-            break;
-        }
-    }
+for (let i = 1; i < numbers.length; i++) {
+if (numbers[i] < numbers[i - 1]) {
+secondBiggest = numbers[i];
+break;
+}
+}
 }
 
 // Print the second biggest integer
-console.log(secondBiggest);
+console.log(secondBiggest); //this is the expected output 
+
