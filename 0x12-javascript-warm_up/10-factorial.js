@@ -17,4 +17,4 @@ const number = Number(process.argv[2]);
 const result = factorial(number);
 
 // Print the factorial result, handling Infinity if the result is too large
-console.log(Number.isFinite(result) ? result : "Infinity");
+console.log(Number.isFinite(result) ? result : 'Infinity');
