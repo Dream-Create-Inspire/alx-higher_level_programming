@@ -6,9 +6,9 @@ const x = Number.parseInt(args[0], 10);
 
 // Check if the conversion is successful
 if (Number.isNaN(x)) {
-    console.log("Missing number of occurrences");
+  console.log('Missing number of occurrences');
 } else {
-    for (let i = 0; i < x; i++) {
-        console.log("C is fun");
-    }
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
+  }
 }
