@@ -13,3 +13,4 @@ const output = !Number.isNaN(number) ? `My number: ${number}` : 'Not a number';
 
 // Print the output
 console.log(output);
+
