@@ -1,2 +1,4 @@
-// 100-let_me_const.js
-myVar = 333;
+#!usr/bin/node
+const myVar = 333;
+
+console.log(myVar); // This will print 333 to the console
