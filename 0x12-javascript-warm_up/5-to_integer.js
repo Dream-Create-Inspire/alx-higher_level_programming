@@ -9,7 +9,7 @@ const firstArg = args[0];
 const number = Number.parseInt(firstArg, 10);
 
 // Check if the conversion is successful
-const output = !Number.isNaN(number) ? `My number: ${number}` : "Not a number";
+const output = !Number.isNaN(number) ? `My number: ${number}` : 'Not a number';
 
 // Print the output
 console.log(output);
