@@ -4,3 +4,4 @@ class Rectangle {
 }
 
 module.exports = Rectangle; // Exporting the class for usage in other files
+
