@@ -8,10 +8,10 @@ const size = Number.parseInt(args[0], 10);
 
 // Check if the conversion is successful
 if (Number.isNaN(size)) {
-    console.log("Missing size");
+  console.log('Missing size');
 } else {
-    // Print the square
-    for (let i = 0; i < size; i++) {
-        console.log("X".repeat(size));
-    }
+  // Print the square
+  for (let i = 0; i < size; i++) {
+    console.log('X'.repeat(size));
+  }
 }
