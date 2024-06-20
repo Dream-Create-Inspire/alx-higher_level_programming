@@ -7,6 +7,5 @@ const args = process.argv.slice(2);
 const firstArg = args[0];
 
 // Print the first argument or "No argument" if none are passed
-const output = firstArg !== undefined ? firstArg : "No argument";
+const output = firstArg !== undefined ? firstArg : 'No argument';
 console.log(output);
-
